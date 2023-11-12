@@ -54,11 +54,13 @@ int main(void)
     USART1_Init(115200);
     Delay_Init();
     IIC_Init();
+    IIC_Init();
+    IIC_Init();
     for(i=0;i<256;i++)
     {
         AT24CX_Write_Byte(i, i);
         Delay_Ms(5);
-        U0_printf("´«ËÍÁË%d¸öÊý¾Ý\r\n",i+1);
+        U0_printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n",i+1);
     }
 //    IIC_Start();
 //    IIC_Send_Byte(0xa0);
@@ -71,7 +73,7 @@ int main(void)
 //
 //        if(U1_Ctrl_Struct.RX_Out!=U1_Ctrl_Struct.RX_In)
 //        {
-//            U0_printf("½ÓÊÜÁË%d¸öÊý¾Ý\r\n",U1_Ctrl_Struct.RX_Out->end-U1_Ctrl_Struct.RX_Out->start+1);
+//            U0_printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n",U1_Ctrl_Struct.RX_Out->end-U1_Ctrl_Struct.RX_Out->start+1);
 //            for(int i=0;i<U1_Ctrl_Struct.RX_Out->end-U1_Ctrl_Struct.RX_Out->start+1;i++)
 //            {
 //                U0_printf("%c",U1_Ctrl_Struct.RX_Out->start[i]);
